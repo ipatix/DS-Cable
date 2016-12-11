@@ -1,0 +1,20 @@
+// Xilinx design hierarchy information file produced by netgen (P.20131013) 
+// The information in this file is useful for 
+//   - Design hierarchy relationship between modules 
+//   - Bottom up compilation order (VHDL simulation) 
+//   - SDF file annotation (VHDL simulation) 
+//
+//  Design Name : UsbMuxer
+//
+//  Module      : The name of the hierarchical design module.
+//  Instance    : The instance name used in the parent module.
+//  Design File : The name of the file that contains the module.
+//  SDF File    : The SDF file associated with the module.
+//  SubModule   : The sub module(s) contained within a given module.
+//     Module, Instance : The sub module and instance names.
+
+  Module      : UsbMuxer
+  Design File : UsbMuxer_timesim.vhd
+  SDF File    : UsbMuxer_timesim.sdf
+  SubModule   : NONE
+

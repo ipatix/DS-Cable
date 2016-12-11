@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/michael/Xilinx/DSCable/UsbMuxerTB_isim_par.exe" -prj "/home/michael/Xilinx/DSCable/UsbMuxerTB_par.prj" "work.UsbMuxerTB" 

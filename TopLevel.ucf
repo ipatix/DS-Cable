@@ -1,0 +1,151 @@
+NET "usb_clk" LOC = H13;
+
+NET "usb_clk" IOSTANDARD = LVCMOS33;
+
+NET "adbus[7]" IOSTANDARD = LVCMOS33;
+NET "adbus[6]" IOSTANDARD = LVCMOS33;
+NET "adbus[5]" IOSTANDARD = LVCMOS33;
+NET "adbus[4]" IOSTANDARD = LVCMOS33;
+NET "adbus[3]" IOSTANDARD = LVCMOS33;
+NET "adbus[2]" IOSTANDARD = LVCMOS33;
+NET "adbus[1]" IOSTANDARD = LVCMOS33;
+NET "adbus[0]" IOSTANDARD = LVCMOS33;
+NET "ldg[5]" IOSTANDARD = LVCMOS33;
+NET "ldg[4]" IOSTANDARD = LVCMOS33;
+NET "ldg[3]" IOSTANDARD = LVCMOS33;
+NET "ldg[2]" IOSTANDARD = LVCMOS33;
+NET "ldg[1]" IOSTANDARD = LVCMOS33;
+NET "ldg[0]" IOSTANDARD = LVCMOS33;
+NET "ldb[5]" IOSTANDARD = LVCMOS33;
+NET "ldb[4]" IOSTANDARD = LVCMOS33;
+NET "ldb[3]" IOSTANDARD = LVCMOS33;
+NET "ldb[2]" IOSTANDARD = LVCMOS33;
+NET "ldb[1]" IOSTANDARD = LVCMOS33;
+NET "ldb[0]" IOSTANDARD = LVCMOS33;
+NET "ldr[5]" IOSTANDARD = LVCMOS33;
+NET "ldr[4]" IOSTANDARD = LVCMOS33;
+NET "ldr[3]" IOSTANDARD = LVCMOS33;
+NET "ldr[2]" IOSTANDARD = LVCMOS33;
+NET "ldr[1]" IOSTANDARD = LVCMOS33;
+NET "ldr[0]" IOSTANDARD = LVCMOS33;
+NET "dclk" IOSTANDARD = LVCMOS33;
+NET "rd" IOSTANDARD = LVCMOS33;
+NET "reset" IOSTANDARD = LVCMOS33;
+NET "rxf" IOSTANDARD = LVCMOS33;
+NET "siwu" IOSTANDARD = LVCMOS33;
+NET "spi_clk" IOSTANDARD = LVCMOS33;
+NET "spi_cs" IOSTANDARD = LVCMOS33;
+NET "spi_din" IOSTANDARD = LVCMOS33;
+NET "spi_dout" IOSTANDARD = LVCMOS33;
+NET "txe" IOSTANDARD = LVCMOS33;
+NET "vsync" IOSTANDARD = LVCMOS33;
+NET "wr" IOSTANDARD = LVCMOS33;
+
+
+NET "leds[3]" IOSTANDARD = LVCMOS33;
+NET "leds[2]" IOSTANDARD = LVCMOS33;
+NET "leds[1]" IOSTANDARD = LVCMOS33;
+NET "leds[0]" IOSTANDARD = LVCMOS33;
+
+
+NET "rd" LOC = G14;
+NET "reset" LOC = P8;
+NET "rxf" LOC = E14;
+NET "siwu" LOC = F14;
+NET "txe" LOC = G13;
+NET "wr" LOC = F13;
+NET "leds[3]" LOC = P4;
+NET "leds[2]" LOC = N4;
+NET "leds[1]" LOC = P3;
+NET "leds[0]" LOC = N3;
+NET "adbus[5]" LOC = K13;
+NET "adbus[4]" LOC = K14;
+NET "adbus[3]" LOC = L13;
+NET "adbus[2]" LOC = L14;
+NET "adbus[1]" LOC = N12;
+NET "adbus[0]" LOC = P12;
+NET "adbus[6]" LOC = J14;
+NET "adbus[7]" LOC = J13;
+
+
+NET "ldb[5]" LOC = F2;
+NET "ldb[4]" LOC = M2;
+NET "ldb[3]" LOC = G1;
+NET "ldb[2]" LOC = M1;
+NET "ldb[1]" LOC = D1;
+NET "ldb[0]" LOC = H2;
+NET "ldg[5]" LOC = C1;
+NET "ldg[4]" LOC = D2;
+NET "ldg[3]" LOC = E1;
+NET "ldg[2]" LOC = J1;
+NET "ldg[1]" LOC = K2;
+NET "ldg[0]" LOC = J2;
+NET "ldr[5]" LOC = K1;
+NET "ldr[4]" LOC = L1;
+NET "ldr[3]" LOC = L2;
+NET "ldr[2]" LOC = E2;
+NET "ldr[1]" LOC = G2;
+NET "ldr[0]" LOC = B1;
+NET "dclk" LOC = F1;
+NET "vsync" LOC = H1;
+
+NET "spi_clk" LOC = P7;
+NET "spi_cs" LOC = P5;
+NET "spi_din" LOC = N6;
+NET "spi_dout" LOC = N5;
+#Created by Constraints Editor (xc6slx4-cpg196-3) - 2016/11/10
+NET "dclk" TNM_NET = "dclk";
+TIMESPEC TS_dclk = PERIOD "dclk" 6 MHz HIGH 50 %;
+NET "usb_clk" TNM_NET = "usb_clk";
+TIMESPEC TS_usb_clk = PERIOD "usb_clk" 60 MHz HIGH 50 %;
+#Created by Constraints Editor (xc6slx4-cpg196-3) - 2016/11/10
+INST "ldb[0]" TNM = "VIDEO_BUS";
+INST "ldb[1]" TNM = "VIDEO_BUS";
+INST "ldb[2]" TNM = "VIDEO_BUS";
+INST "ldb[3]" TNM = "VIDEO_BUS";
+INST "ldb[4]" TNM = "VIDEO_BUS";
+INST "ldb[5]" TNM = "VIDEO_BUS";
+INST "ldg[0]" TNM = "VIDEO_BUS";
+INST "ldg[1]" TNM = "VIDEO_BUS";
+INST "ldg[2]" TNM = "VIDEO_BUS";
+INST "ldg[3]" TNM = "VIDEO_BUS";
+INST "ldg[4]" TNM = "VIDEO_BUS";
+INST "ldg[5]" TNM = "VIDEO_BUS";
+INST "ldr[0]" TNM = "VIDEO_BUS";
+INST "ldr[1]" TNM = "VIDEO_BUS";
+INST "ldr[2]" TNM = "VIDEO_BUS";
+INST "ldr[3]" TNM = "VIDEO_BUS";
+INST "ldr[4]" TNM = "VIDEO_BUS";
+INST "ldr[5]" TNM = "VIDEO_BUS";
+INST "vsync" TNM = "VIDEO_BUS";
+#Created by Constraints Editor (xc6slx4-cpg196-3) - 2016/11/12
+INST "adbus[0]" TNM = "USB_BUS_IN";
+INST "adbus[1]" TNM = "USB_BUS_IN";
+INST "adbus[2]" TNM = "USB_BUS_IN";
+INST "adbus[3]" TNM = "USB_BUS_IN";
+INST "adbus[4]" TNM = "USB_BUS_IN";
+INST "adbus[5]" TNM = "USB_BUS_IN";
+INST "adbus[6]" TNM = "USB_BUS_IN";
+INST "adbus[7]" TNM = "USB_BUS_IN";
+INST "rxf" TNM = "USB_BUS_IN";
+INST "txe" TNM = "USB_BUS_IN";
+TIMEGRP "USB_BUS_IN" OFFSET = IN 3 ns VALID 15 ns BEFORE "usb_clk" RISING;
+INST "adbus[0]" TNM = "USB_BUS_OUT";
+INST "adbus[1]" TNM = "USB_BUS_OUT";
+INST "adbus[2]" TNM = "USB_BUS_OUT";
+INST "adbus[3]" TNM = "USB_BUS_OUT";
+INST "adbus[4]" TNM = "USB_BUS_OUT";
+INST "adbus[5]" TNM = "USB_BUS_OUT";
+INST "adbus[6]" TNM = "USB_BUS_OUT";
+INST "adbus[7]" TNM = "USB_BUS_OUT";
+INST "rd" TNM = "USB_BUS_OUT";
+INST "wr" TNM = "USB_BUS_OUT";
+INST "siwu" TNM = "USB_BUS_OUT";
+TIMEGRP "USB_BUS_OUT" OFFSET = OUT 12 ns AFTER "usb_clk";
+
+# PlanAhead Generated IO constraints 
+
+NET "leds[3]" SLEW = QUIETIO;
+NET "leds[2]" SLEW = QUIETIO;
+NET "leds[1]" SLEW = QUIETIO;
+NET "leds[0]" SLEW = QUIETIO;

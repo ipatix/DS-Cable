@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 2691: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 2697: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3082: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3121: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3194: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3212: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3231: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3249: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3275: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3278: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3300: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3318: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3337: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3355: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3381: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3384: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 2691: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 2697: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3081: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3082: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3120: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3121: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3194: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3212: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3231: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3249: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3275: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3278: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3300: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3318: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3337: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3355: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3381: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="unknown" >"/build/xfndry10/P.20131013/rtf/vhdl/src/simprims/primitive/other/X_RAMB16BWER.vhd" Line 3384: Range is empty (null range)
+</msg>
+
+</messages>
+

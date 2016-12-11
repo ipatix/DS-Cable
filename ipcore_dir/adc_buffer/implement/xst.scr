@@ -1,0 +1,13 @@
+run
+-ifmt VHDL
+-ent adc_buffer_exdes 
+-p xc6slx4-cpg196-3
+-ifn xst.prj
+-write_timing_constraints No
+-iobuf YES
+-max_fanout 100
+-ofn adc_buffer_exdes 
+-ofmt NGC
+-bus_delimiter ()
+-hierarchy_separator /
+-case Maintain
