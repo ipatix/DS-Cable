@@ -78,6 +78,9 @@ architecture Behavioral of VideoInterface is
         );
     END COMPONENT;
     -- ***************************************
+    
+    -- lcd input signals
+    signal i_ndclk : std_logic;
 
     -- screen fifo signals
     signal fifo_scr_din : std_logic_vector (36 downto 0) := (others => '0');
@@ -104,6 +107,9 @@ architecture Behavioral of VideoInterface is
 
     signal is_top : std_logic := '1';
 begin
+    -- lcd signals
+    i_ndclk <= not i_dclk;
+    
     -- other signals
     reset <= i_rst;
     usb_clk <= i_usb_clk;
@@ -121,7 +127,7 @@ begin
     Inst_scr_fifo: scr_fifo PORT MAP 
     (
         rst => reset,
-        wr_clk => i_dclk,
+        wr_clk => i_ndclk,
         rd_clk => usb_clk,
         din => fifo_scr_din,
         wr_en => fifo_scr_wr_en,
@@ -144,7 +150,7 @@ begin
     );
     -- ***************************************
     -- DS interface process
-    process (i_dclk, i_vsync, reset, usb_clk)
+    process (i_ndclk, i_vsync, reset, usb_clk)
     begin
         if (reset = '1') then
             is_top <= '1';
@@ -157,12 +163,14 @@ begin
             fifo_video_din <= (others => '0');
             fifo_video_wr_en <= '0';
         else
-            if (i_vsync = '0') then
+            -- added not for inverted input
+            if (not i_vsync = '0') then
                 is_vsync <= '1';
             else
-                if (falling_edge(i_dclk)) then
+                if (falling_edge(i_ndclk)) then
                 -- step 1
-                    video_data_top <= is_vsync & i_ldr & i_ldg & i_ldb;
+                    -- not added for inverted inputs
+                    video_data_top <= is_vsync & not (i_ldr & i_ldg & i_ldb);
                     is_vsync <= '0';
                 -- step 3
                     fifo_scr_din <= video_data_final;
@@ -172,9 +180,10 @@ begin
                         fifo_scr_wr_en <= '0';
                     end if;
                 end if;
-                if (rising_edge(i_dclk)) then
+                if (rising_edge(i_ndclk)) then
                 -- step 2
-                    video_data_final <= video_data_top & i_ldr & i_ldg & i_ldb;
+                    -- not added for inverted inputs
+                    video_data_final <= video_data_top & not (i_ldr & i_ldg & i_ldb);
                 end if;
             end if;
             if (falling_edge(usb_clk)) then

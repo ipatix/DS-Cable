@@ -48,6 +48,9 @@ impact.xsl
 impact_impact.xwbt
 ise_impact.cmd
 webtalk_impact.xml
+*.cfi
+*.mcs
+*.prm
 
 # Core Generator generated files
 xaw2verilog.log

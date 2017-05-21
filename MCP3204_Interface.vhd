@@ -88,6 +88,10 @@ architecture Behavioral of MCP3204_Interface is
     signal spi_clock_buf : std_logic := '1';
     signal spi_cs_buf : std_logic := '1';
     signal spi_dout_buf : std_logic := '1';
+    
+    signal nspi_clock : std_logic;
+    signal nspi_cs : std_logic;
+    signal nspi_dout : std_logic;
 begin
     Inst_adc_buffer: adc_buffer PORT MAP
     (
@@ -100,10 +104,14 @@ begin
         full => fifo_full,
         empty => fifo_empty
     );
+    
+    oSPI_CLK <= nspi_clock;
+    oCS <= nspi_cs;
+    oDOUT <= nspi_dout;
 
-    oSPI_CLK <= spi_clock_buf;
-    oCS <= spi_cs_buf;
-    oDOUT <= spi_dout_buf;
+    nspi_clock <= not spi_clock_buf;
+    nspi_cs <= not spi_cs_buf;
+    nspi_dout <= not spi_dout_buf;
 
     oEMPTY <= fifo_empty;
     oDATA <= "10000000" & fifo_out;
@@ -206,9 +214,10 @@ begin
                             when b11_r => 
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    -- added not for inverted input
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b10_f;
                             when b10_f => 
@@ -217,9 +226,9 @@ begin
                             when b10_r =>
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b9_f;
                             when b9_f =>
@@ -228,9 +237,9 @@ begin
                             when b9_r => 
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b8_f;
                             when b8_f =>
@@ -239,9 +248,9 @@ begin
                             when b8_r =>
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b7_f;
                             when b7_f =>
@@ -250,9 +259,9 @@ begin
                             when b7_r =>
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b6_f;
                             when b6_f =>
@@ -261,9 +270,9 @@ begin
                             when b6_r =>
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b5_f;
                             when b5_f =>
@@ -272,9 +281,9 @@ begin
                             when b5_r =>
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b4_f;
                             when b4_f =>
@@ -283,9 +292,9 @@ begin
                             when b4_r =>
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b3_f;
                             when b3_f =>
@@ -294,9 +303,9 @@ begin
                             when b3_r =>
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b2_f;
                             when b2_f =>
@@ -305,9 +314,9 @@ begin
                             when b2_r =>
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b1_f;
                             when b1_f =>
@@ -316,9 +325,9 @@ begin
                             when b1_r =>
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= b0_f;
                             when b0_f =>
@@ -327,9 +336,9 @@ begin
                             when b0_r =>
                                 spi_clock_buf <= '1';
                                 if (sample_side_buf = left) then
-                                    sample_val_left <= sample_val_left (10 downto 0) & iDIN;
+                                    sample_val_left <= sample_val_left (10 downto 0) & not iDIN;
                                 else
-                                    sample_val_right <= sample_val_right (10 downto 0) & iDIN;
+                                    sample_val_right <= sample_val_right (10 downto 0) & not iDIN;
                                 end if;
                                 sample_state_buf <= end_f;
                             when end_f =>
